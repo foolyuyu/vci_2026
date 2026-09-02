@@ -50,16 +50,7 @@ git checkout lab0
 
 我们的 Lab 使用 xmake ([Home](https://xmake.io/)) 作为构建工具，而 xmake 依赖 Git 完成包管理等核心功能，请确保已经安装了 [Git](https://git-scm.com/) 。通过 [xmake安装说明](https://xmake.io/#/guide/installation) 中对于你的平台的描述，安装 xmake。完成安装后，可以在终端中运行 `xmake --version` 来确认安装正确。
 
-接下来，你只需要在终端中进入 `vci-2026` 目录（下同），然后在命令行中输入 `xmake` 并执行，你就会看到 xmake 自动识别你的平台，下载所有依赖库并完成编译和链接；注意这里可能遇到一些网络问题，可以参见FAQ中网络错误的部分。项目已经固定使用 Dear ImGui v1.89.9，无需另外安装 ImGui。
-
-如果使用 Ubuntu 或 WSL 2，请在该 Linux 环境中单独安装 Git、xmake 和编译工具。GLFW 默认使用 X11，可以先安装以下系统依赖：
-
-```shell
-sudo apt update
-sudo apt install -y build-essential git xorg-dev libgl1-mesa-dev
-```
-
-WSL 中运行图形界面还需要 WSLg；建议使用最新的 WSL 2。编译时可能出现不影响构建的 warning，但不应忽略 error；需要求助时请附上 `xmake -v` 的完整输出。
+接下来，你只需要在终端中进入 `vci-2026` 目录（下同），然后在命令行中输入 `xmake` 并执行，你就会看到 xmake 自动识别你的平台，下载所有依赖库并完成编译和链接；注意这里可能遇到一些网络问题，可以参见FAQ中网络错误的部分。注意项目已经固定使用ImGui v1.89.9，无需另外安装 ImGui。
 
 继续执行 `xmake run lab0`，如果一切顺利，你会看到一个界面，通过界面可以切换显示方框中的红色三角形与一个彩色三角形。
 
@@ -174,6 +165,17 @@ WSL 中运行图形界面还需要 WSLg；建议使用最新的 WSL 2。编译�
 - Q. 我使用 Mac OS 系统，安装时报错 `invalid Darwin version number: macos 12.3`
 
 - A. 使用的 XCode 版本过低，将 XCode 更新到最新版本即可。
+
+
+- Q. 使用Ubuntu 或 WSL 2 可能需要安装哪些依赖？
+- A. 如果使用Ubuntu 或 WSL 2 ，请在该 Linux 环境中单独安装 Git、xmake 和编译工具。GLFW 默认使用 X11，可以先安装以下系统依赖：
+
+  ```shell
+  sudo apt update
+  sudo apt install -y build-essential git xorg-dev libgl1-mesa-dev
+  ```
+
+  WSL 中运行图形界面还需要 WSLg；建议使用最新的 WSL 2。编译时可能出现不影响构建的 warning，但不应忽略 error；需要求助时请附上 `xmake -v` 的完整输出。
 
 ### 写在后面
 
