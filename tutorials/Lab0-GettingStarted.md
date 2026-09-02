@@ -22,7 +22,7 @@
 
 ### 1 - Merge Handout Packs
 
-我们的 Lab 位于网址 [https://gitee.com/pku-vcl/vci-2026/](https://gitee.com/pku-vcl/vci-2026/) 。首先你需要按照 [Git 官网](https://git-scm.com/) 的指引安装 Git 。安装好 Git 之后，使用 Git 将 Lab 仓库 clone 到你喜欢的目录下，这将建立一个名为 `vcx` 的目录：这就是你这个学期做所有 Lab 的目录。
+我们的 Lab 位于网址 [https://gitee.com/pku-vcl/vci-2026/](https://gitee.com/pku-vcl/vci-2026/) 。首先你需要按照 [Git 官网](https://git-scm.com/) 的指引安装 Git 。安装好 Git 之后，使用 Git 将 Lab 仓库 clone 到你喜欢的目录下，这将建立一个名为 `vci-2026` 的目录：这就是你这个学期做所有 Lab 的目录。
 
 ```shell
 git clone https://gitee.com/pku-vcl/vci-2026/
@@ -50,7 +50,16 @@ git checkout lab0
 
 我们的 Lab 使用 xmake ([Home](https://xmake.io/)) 作为构建工具，而 xmake 依赖 Git 完成包管理等核心功能，请确保已经安装了 [Git](https://git-scm.com/) 。通过 [xmake安装说明](https://xmake.io/#/guide/installation) 中对于你的平台的描述，安装 xmake。完成安装后，可以在终端中运行 `xmake --version` 来确认安装正确。
 
-接下来，你只需要在终端中进入 `vcx2024` 目录（下同），然后在命令行中输入 `xmake` 并执行，你就会看到 xmake 自动识别你的平台，下载所有依赖库并完成编译和链接；注意这里可能遇到一些网络问题，可以参见FAQ中网络错误的部分。
+接下来，你只需要在终端中进入 `vci-2026` 目录（下同），然后在命令行中输入 `xmake` 并执行，你就会看到 xmake 自动识别你的平台，下载所有依赖库并完成编译和链接；注意这里可能遇到一些网络问题，可以参见FAQ中网络错误的部分。项目已经固定使用 Dear ImGui v1.89.9，无需另外安装 ImGui。
+
+如果使用 Ubuntu 或 WSL 2，请在该 Linux 环境中单独安装 Git、xmake 和编译工具。GLFW 默认使用 X11，可以先安装以下系统依赖：
+
+```shell
+sudo apt update
+sudo apt install -y build-essential git xorg-dev libgl1-mesa-dev
+```
+
+WSL 中运行图形界面还需要 WSLg；建议使用最新的 WSL 2。编译时可能出现不影响构建的 warning，但不应忽略 error；需要求助时请附上 `xmake -v` 的完整输出。
 
 继续执行 `xmake run lab0`，如果一切顺利，你会看到一个界面，通过界面可以切换显示方框中的红色三角形与一个彩色三角形。
 
@@ -98,7 +107,7 @@ git checkout lab0
 - A. 确保你已经通过 powershell 安装了 xmake ；如果是通过下载 exe 安装包安装的 xmake ，需要按照官网说明手动配置环境变量。
 
 - Q. 在命令行中输入 xmake 后显示「note: xmake.lua not found, try generating it」怎么办？
-- A. 确保命令行当前所在的文件夹是 vcx2024 ，如果不是，通过 cd 指令转到正确的路径；如果已经在 vcx2024 文件夹下，确保你已经通过 git checkout lab0 切换到了 lab0 分支。
+- A. 确保命令行当前所在的文件夹是 `vci-2026`，如果不是，通过 cd 指令转到正确的路径；如果已经在 `vci-2026` 文件夹下，确保你已经通过 `git checkout lab0` 切换到了 lab0 分支。
 
 - Q. 首次在命令行中输入 xmake 后需要安装一些包，此时报错下载失败并且能够看到「we can also download these packages manually」及「error: curl: (56) Recv failure: Connection was reset」字样怎么办？
 - A. 这是因为访问Github时遇到了网络问题，有两种解决方案：

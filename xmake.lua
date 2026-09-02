@@ -4,12 +4,14 @@ set_xmakever("2.6.9")
 set_languages("cxx20")
 
 add_rules("mode.debug", "mode.release", "mode.profile")
-add_cxxflags("/utf-8")
+if is_plat("windows") then
+    add_cxxflags("/utf-8")
+end
 
 add_requires("glad")
 add_requires("glfw")
 add_requires("glm")
-add_requires("imgui")
+add_requires("imgui v1.89.9")
 add_requires("spdlog")
 add_requires("stb")
 add_requires("fmt")
