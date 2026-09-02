@@ -22,16 +22,16 @@
 
 ### 1 - Merge Handout Packs
 
-我们的 Lab 位于网址 [https://gitee.com/pku-vcl/vcx2024.git](https://gitee.com/pku-vcl/vcx2024.git) 。首先你需要按照 [Git 官网](https://git-scm.com/) 的指引安装 Git 。安装好 Git 之后，使用 Git 将 Lab 仓库 clone 到你喜欢的目录下，这将建立一个名为 `vcx` 的目录：这就是你这个学期做所有 Lab 的目录。
+我们的 Lab 位于网址 [https://gitee.com/pku-vcl/vci-2026/](https://gitee.com/pku-vcl/vci-2026/) 。首先你需要按照 [Git 官网](https://git-scm.com/) 的指引安装 Git 。安装好 Git 之后，使用 Git 将 Lab 仓库 clone 到你喜欢的目录下，这将建立一个名为 `vcx` 的目录：这就是你这个学期做所有 Lab 的目录。
 
 ```shell
-git clone https://gitee.com/pku-vcl/vcx2024.git
+git clone https://gitee.com/pku-vcl/vci-2026/
 ```
 
 你可以使用 `git checkout lab0` 切换到lab0的分支：
 
 ```shell
-cd vcx2024
+cd vci-2026
 git checkout lab0
 ```
 
