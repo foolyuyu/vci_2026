@@ -8,13 +8,13 @@ if is_plat("windows") then
     add_cxxflags("/utf-8")
 end
 
-add_requires("glad")
+add_requires("glad v0.1.36")
 add_requires("glfw")
 add_requires("glm")
 add_requires("imgui v1.89.9")
 add_requires("spdlog")
 add_requires("stb")
-add_requires("fmt")
+add_requires("fmt v11.1.4")
 add_requires("tinyobjloader")
 add_requires("yaml-cpp")
 add_requires("eigen")
